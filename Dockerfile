@@ -3,7 +3,7 @@ MAINTAINER Rory McCune <rorym@mccune.org.uk>
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-RUN apk --update add openssh nmap curl tcpdump && \
+RUN apk --update add openssh nmap nmap-scripts curl tcpdump && \
 sed -i s/#PermitRootLogin.*/PermitRootLogin\ yes/ /etc/ssh/sshd_config && rm -rf /var/cache/apk/*
 
 
